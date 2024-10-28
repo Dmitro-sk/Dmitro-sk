@@ -1,8 +1,14 @@
-import telebot
+hello = "Hello World"
+name = "Dmytro"
+lastname = "Tsopyth"
+age = "16"
 
-token="8079271530:AAG07XZhwiwFnwULyRNE31XRTWwS5oEmjnM"
+print(hello)
+print(name)
+print(lastname)
+print(age)
 
-bot = telebot.Telebot(token)
-
-@bot_massage_handler (content_type=["text"])
-def repeat_all_massage(massage):
+print(type(hello))
+print(type(name))
+print(type(lastname))
+print(type(age))
