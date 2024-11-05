@@ -1,5 +1,3 @@
-
-
 import telebot
 
 token='8079271530:AAG07XZhwiwFnwULyRNE31XRTWwS5oEmjnM'
