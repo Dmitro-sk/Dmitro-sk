@@ -13,7 +13,7 @@ print(type(name))
 print(type(lastname))
 print(type(age)) 
 
-count_int = 0
+count_int = 0 #лічильники
 count_str = 0
 count_bool = 0
 count_set = 0
@@ -22,7 +22,7 @@ count_tuple = 0
 count_float = 0
 lst_notnull = []
 max_value = -1
-types_count = {str, int, bool, set, list, tuple, float}
+types_count = {str, int, bool, set, list, tuple, float}#список зміних
 lst_count_types = [count_set, count_float, count_tuple, count_list, count_bool, count_str, count_int]#список лічильників
 lst_name_type = ['set', 'float', 'tuple', 'list', 'bool', str, int]#список назв
 lst = [name, lastname, age]
