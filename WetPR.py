@@ -57,3 +57,5 @@ for item in lst:
 #     print("good")
 # if count_str>count_int:
 #     remove: type(int) from lst:
+#if else = якщо або
+#for break = початок кінець циклу
