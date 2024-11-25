@@ -34,20 +34,20 @@ for item in lst: #цикл що рахує  кількість типів
 
 for item in lst_count_types:
     if item != 0:#цикл кий перевіряє чи не є значення нульовим
-        lst_notnull.append(item)
-    if len(lst_notnull) == 0:
+        lst_notnull.append(item) #це метод списку, який додає новий елемент у кінець списку.
+    if len(lst_notnull) == 0: #перевіряє чи є список порожній
         print('Good')
     else:
         if item == max_value:
             print('Not')
-            break
+            break #якщо значення item дорівнює макс.значення то виведе not
 
         elif item > max_value:
-            max_value = item
+            max_value = item # код виконує перевірку і, якщо вона проходить, оновлює значення змінної max_value
 
 inn = lst_count_types.index(max_value)#в цю заганяємо індекс макс. значення 
 
-print(lst_name_type[inn])
+print(lst_name_type[inn])#Виводить значення елемента з індексом або ключем inn із колекції lst_name_type
 
 for item in lst:
     if type(item) != lst_name_type[inn]:
