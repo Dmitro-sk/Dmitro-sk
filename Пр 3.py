@@ -1,40 +1,42 @@
-lst = [1,2,3,4,5,6,3,4,5,7,6,5,4,3,4,5,4,3, 'Привіт', 'анаконда'].  # Список, який містить числа та рядки.
+lst = [1, 2, 3, 4, 5, 6, 3, 4, 5, 7, 6, 5, 4, 3, 4, 5, 4, 3, 'Привіт', 'анаконда']  # Вхідний список із чисел та рядків
 
-def def_lst_unique(lst):
-    lst_unique = []  # Створює список для збереження унікальних значень.
-    lst_append = []  # Список для перетворення рядків у нижній регістр та зберігання всіх значень.
-    for a in lst:  # Цикл, що проходить по всіх елементах вхідного списку `lst`.
-        if type(a) == str:  # Перевіряє, чи елемент є рядком.
-            a_lower = a.lower()  # Перетворює рядок у нижній регістр.
-            lst_append.append(a_lower)  # Додає перетворений рядок до `lst_append`.
+def function_lst_unique(lst):  # Функція для отримання унікальних елементів зі списку
+    lst_unique = []
+    lst2 = []
+    for d in lst:  # Перебираємо всі елементи у списку
+        if type(d) == str:
+            d_lower = d.lower()
+            lst2.append(d_lower)
         else:
-            lst_append.append(a)  # Якщо це не рядок, додає елемент без змін.
+            lst2.append(d)
 
-    lst_in_set = set()  # Створює порожню множину для перевірки унікальності значень.
-    for item in lst_append:  # Цикл для проходження по всіх елементах у `lst_append`.
-        if item not in lst_in_set:  # Перевіряє, чи елемент ще не є у множині.
-            lst_unique.append(item)  # Додає унікальний елемент до `lst_unique`.
-            lst_in_set.add(item)  # Додає елемент до множини для уникнення повторень.
+    lst_in_set = set()
+    for item in lst2:
+        if item not in lst_in_set:  # Якщо елемента ще немає у множині
+            lst_unique.append(item)
+            lst_in_set.add(item)
 
-    return lst_unique and lst_in_set  # Повертає список унікальних значень та множину.
+    return lst_unique
 
-def def_lst_sort(lst):
-    lst_str = []  # Створює список для зберігання рядків.
-    lst_int = []  # Створює список для зберігання чисел.
+def function_lst_sort(lst):  # Функція для сортування списку
+    lst_str = []
+    lst_int = []
 
-    lst_sort = r.copy()  # Копіює список `r` для сортування.
-    for k in lst_sort:  # Цикл для проходження по всіх елементах списку `lst_sort`.
-        if type(k) == int:  # Перевіряє, чи елемент є числом.
-            lst_int.append(k)  # Додає число до списку `lst_int`.
-        elif type(k) == str:  # Перевіряє, чи елемент є рядком.
-            lst_str.append(k)  # Додає рядок до списку `lst_str`.
+    lst_sort = g.copy()
+    for c in lst_sort:
+        if type(c) == int:  # Якщо елемент - ціле число
+            lst_int.append(c)  # Додаємо його до списку чисел
+        elif type(c) == str:
+            lst_str.append(c)
 
-    lst_str.sort()  # Сортує список рядків у алфавітному порядку.
-    lst_int.sort()  # Сортує список чисел у порядку зростання.
+    lst_str.sort()
+    lst_int.sort()
 
-    return lst_int + lst_str  # Об'єднує відсортовані списки чисел і рядків та повертає їх.
+    return lst_int + lst_str  # Повертаємо об'єднаний список чисел і рядків
 
-r = def_lst_unique(lst)  # Викликає функцію `def_lst_unique` для отримання унікальних значень зі списку `lst`.
-sorted_list = def_lst_sort(r)  # Викликає функцію `def_lst_sort` для сортування унікальних значень.
 
-print(sorted_list)  # Виводить відсортований список.
+g = function_lst_unique(lst)
+
+sorted_list = function_lst_sort(g)
+
+print(sorted_list)
