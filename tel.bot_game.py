@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-token = "7423715991:AAGP-mqLjGSjW91ENcQcVrre3NYR7nihNfM"
+token = "token"
 bot = telebot.TeleBot(token)
 
 # Список ігор
